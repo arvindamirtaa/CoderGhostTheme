@@ -12,16 +12,6 @@
 <hr>
 
 <ul class="list-unstyled menu">
-    {{#foreach navigation}}
-    <li>
-        <a class="{{#if current}} strong{{/if}}" href='{{url absolute="true"}}'>{{label}}</a>
-    </li>
-    {{/foreach}}
-</ul>
-
-<hr>
-
-<ul class="list-unstyled menu">
     {{#if @blog.twitter}}
     <li>
         <a href="{{twitter_url}}" target="_blank">
