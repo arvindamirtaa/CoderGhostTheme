@@ -1,45 +1,51 @@
-
 {{#if @blog.logo}}
-    <div class="logo">
-<a class="blog-logo" href="{{@blog.url}}">
-        <img class="blog-logo-image" src="{{@blog.logo}}" alt="Blog Logo"/>
-</a>
-    </div>
+<div class="logo">
+    <a class="blog-logo" href="{{@blog.url}}">
+        <img class="blog-logo-image" src="{{@blog.logo}}" alt="Blog Logo" />
+    </a>
+</div>
 {{/if}}
 
 
-<h5>{{@blog.title}}</h5>
+<h1>{{@blog.title}}</h1>
+
 <hr>
+
 <ul class="list-unstyled menu">
+    {{#foreach navigation}}
     <li>
-        <a href="https://github.com/mbejda" target="_blank">
-         <i class="el el-github"></i> GitHub
+        <a class="{{#if current}} strong{{/if}}" href='{{url absolute="true"}}'>{{label}}</a>
+    </li>
+    {{/foreach}}
+</ul>
+
+<hr>
+
+<ul class="list-unstyled menu">
+    {{#if @blog.twitter}}
+    <li>
+        <a href="{{twitter_url}}" target="_blank">
+            <i class="el el-twitter"></i> {{@blog.twitter}}
+        </a>
+    </li>
+    {{/if}}
+
+    <li>
+        <a href="https://github.com/arvindamirtaa" target="_blank">
+            <i class="el el-github"></i> GitHub
         </a>
     </li>
 
-    {{#if @blog.facebook}}
-        <li>
-            <a href="{{facebook_url}}" target="_blank">
-                <i class="el el-facebook"></i> {{@blog.facebook}}
-            </a>
-        </li>
-    {{/if}}
-
-    {{#if @blog.twitter}}
-        <li>
-            <a href="{{twitter_url}}" target="_blank">
-                <i class="el el-twitter"></i> {{@blog.twitter}}
-            </a>
-        </li>
-    {{/if}}
+    <li>
+        <a href="https://instagram.com/arvindamirtaa" target="_blank">
+            <i class="el el-instagram"></i> Instagram
+        </a>
+    </li>
 
     <li>
-        <a href="skype:mbejda2?add" target="_blank">
-            <i class="el el-skype"></i> mbejda2
+        <a href="mailto:contact@arvind.xyz" target="_blank">
+            <i class="el el-envelope"></i> contact@arvind.xyz
         </a>
 
     </li>
 </ul>
-
-
-
